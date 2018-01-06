@@ -106,6 +106,13 @@ public class databasehelper  extends SQLiteOpenHelper {
         return data;
     }
 
+    public Cursor getFilm(int id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "SELECT * FROM " + TABLE_NAME_FILM  + " WHERE " + COL1_FILM + " = " + id;
+        Cursor data = db.rawQuery(query, null);
+        return data;
+    }
+
     public Cursor getDataLibrary(){
         SQLiteDatabase db = this.getWritableDatabase();
         String query = "SELECT * FROM " + TABLE_NAME_LIBRARY;

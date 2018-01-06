@@ -13,6 +13,8 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 
 /**
@@ -23,6 +25,7 @@ public class index extends AppCompatActivity {
     int idBiblioteki;
     private ListView mListView;
     databasehelper mDatabaseHelper;
+    Map<Integer, Integer> map = new HashMap<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,9 +48,11 @@ public class index extends AppCompatActivity {
     private void populateListView() {
         Cursor data = mDatabaseHelper.getFilmsFromLibrary(idBiblioteki);
         ArrayList<String> listData = new ArrayList<>();
+        int i = 0;
         while(data.moveToNext()){
-
+            map.put(i,data.getInt(0));
             listData.add(data.getString(1));
+            i++;
         }
 
         ListAdapter adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listData);
@@ -57,7 +62,16 @@ public class index extends AppCompatActivity {
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                int id = map.get(i) != null ? map.get(i) : -1;
 
+                if(id > -1){
+                    Intent editScreenIntent = new Intent(index.this, filmszczegoly.class);
+                    editScreenIntent.putExtra("id",id);
+                    startActivity(editScreenIntent);
+                }
+                else{
+
+                }
             }
         });
     }

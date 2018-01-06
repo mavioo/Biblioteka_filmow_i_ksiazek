@@ -44,7 +44,7 @@
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/opis"
+        android:id="@+id/opisF"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -56,7 +56,7 @@
         android:layout_height="wrap_content"
         android:text="Dodaj"
         android:gravity="center"
-        android:layout_below="@+id/opis"
+        android:layout_below="@+id/opisF"
         android:id="@+id/dodajdof"
         />
 

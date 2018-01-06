@@ -30,7 +30,7 @@ public class dodajfilm extends AppCompatActivity {
         czas = (EditText) findViewById(R.id.Czas);
         rok = (EditText) findViewById(R.id.rok);
         gatunek = (EditText) findViewById(R.id.gatunek);
-        opis = (EditText) findViewById(R.id.opis);
+        opis = (EditText) findViewById(R.id.opisF);
         btnAdd = (Button) findViewById(R.id.dodajdof);
         mDatabaseHelper = new databasehelper(this);
 

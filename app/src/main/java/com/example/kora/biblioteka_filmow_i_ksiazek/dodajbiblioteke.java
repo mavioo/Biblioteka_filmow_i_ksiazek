@@ -52,7 +52,7 @@ public class dodajbiblioteke extends AppCompatActivity {
     }
 
     public void AddData(String newEntry) {
-        boolean insertData = mDatabaseHelper.addData(newEntry);
+        boolean insertData = mDatabaseHelper.addDataLibrary(newEntry);
 
         if (insertData) {
             toastMessage("Biblioteka została dodana");
@@ -65,4 +65,5 @@ public class dodajbiblioteke extends AppCompatActivity {
         Toast.makeText(this,message, Toast.LENGTH_SHORT).show();
         {
         }
-    }   }
+    }
+}

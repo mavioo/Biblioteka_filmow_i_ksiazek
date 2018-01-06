@@ -13,7 +13,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button buttonActivity2 = (Button)findViewById(R.id.enter);
-
+        // do odkomentowanie jak dodajesz nowa tabele
+        //  getBaseContext().deleteDatabase("people_table");
 
         buttonActivity2.setOnClickListener(new StartNewActivity2());
 

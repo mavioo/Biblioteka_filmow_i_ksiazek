@@ -50,7 +50,7 @@ public class usunbiblioteke extends AppCompatActivity {
             public void onClick(View view) {
                 String item = editable_item.getText().toString();
                 if(!item.equals("")){
-                    mDatabaseHelper.updateName(item,selectedID,selectedName);
+                    mDatabaseHelper.updateNameLibrary(item,selectedID,selectedName);
                 }else{
                     toastMessage("Musisz podać nazwe");
                 }
@@ -60,7 +60,7 @@ public class usunbiblioteke extends AppCompatActivity {
         btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mDatabaseHelper.deleteName(selectedID,selectedName);
+                mDatabaseHelper.deleteNameLibrary(selectedID,selectedName);
                 editable_item.setText("");
                 toastMessage("Biblioteka zostałą usunięta");
             }

@@ -3,60 +3,54 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <EditText
+        android:id="@+id/tytul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Tytuł"
+        android:inputType="textPersonName" />
+
+    <EditText
         android:id="@+id/rezyser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:gravity="center"
-        android:inputType="textPersonName"
-        android:selectAllOnFocus="false"
-        android:text="Reżyser"
-        android:textSize="20sp" />
+        android:hint="Reżyser"
+        android:inputType="textPersonName" />
 
-    <TextView
-        android:id="@+id/rok"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:gravity="center"
-        android:inputType="textPersonName"
-        android:selectAllOnFocus="false"
-        android:text="Rok produkcji"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/gatunek"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:gravity="center"
-        android:inputType="textPersonName"
-        android:selectAllOnFocus="false"
-        android:text="Gatunek"
-        android:textSize="20sp" />
-
-    <TextView
+    <EditText
         android:id="@+id/Czas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:gravity="center"
-        android:inputType="textPersonName"
-        android:selectAllOnFocus="false"
-        android:text="Czas trwania"
-        android:textSize="20sp" />
+        android:hint="Czas trwania"
+        android:inputType="textPersonName" />
 
-    <TextView
+    <EditText
+        android:id="@+id/rok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Rok produkcji"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/gatunek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Gatunek"
+        android:inputType="textPersonName" />
+
+    <EditText
         android:id="@+id/opis"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:gravity="center"
-        android:inputType="textPersonName"
-        android:selectAllOnFocus="false"
-        android:text="Opis"
-        android:textSize="20sp" />
+        android:hint="Opis"
+        android:inputType="textPersonName" />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -65,4 +59,5 @@
         android:layout_below="@+id/opis"
         android:id="@+id/dodajdof"
         />
+
 </LinearLayout>

@@ -41,7 +41,7 @@ public class biblioteka extends AppCompatActivity {
         Log.d(TAG, "populateListView: Displaying data in the ListView.");
 
 
-        Cursor data = mDatabaseHelper.getData();
+        Cursor data = mDatabaseHelper.getDataLibrary();
         ArrayList<String> listData = new ArrayList<>();
         while(data.moveToNext()){
 
@@ -58,7 +58,7 @@ public class biblioteka extends AppCompatActivity {
                 String name = adapterView.getItemAtPosition(i).toString();
                 Log.d(TAG, "onItemClick: You Clicked on " + name);
 
-                Cursor data = mDatabaseHelper.getItemID(name); //get the id associated with that name
+                Cursor data = mDatabaseHelper.getItemIDLibrary(name); //get the id associated with that name
                 int itemID = -1;
                 while(data.moveToNext()){
                     itemID = data.getInt(0);

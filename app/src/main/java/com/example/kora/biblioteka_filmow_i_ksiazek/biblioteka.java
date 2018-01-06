@@ -71,7 +71,7 @@ public class biblioteka extends AppCompatActivity {
                     startActivity(editScreenIntent);
                 }
                 else{
-                    toastMessage("Nie ma takiej nazwy");
+                    toastMessage("Nie ma takiejnazwy");
                 }
             }
         });
